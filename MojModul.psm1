@@ -6,3 +6,5 @@ param (
 )
     "Wersja wynosi: {0}" -f $wersja
 }
+
+Export-ModuleMember -Function *
