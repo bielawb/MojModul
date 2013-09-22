@@ -17,4 +17,4 @@ param (
     }
 }
 
-Export-ModuleMember -Function * -Variable *
+Export-ModuleMember -Function * -Variable * -Alias *
