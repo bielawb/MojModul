@@ -5,11 +5,12 @@ param (
 function Get-Data {
 [OutputType('MojModul.Test')]
 param (
-	$wersja = $script:wersja
+	$wersja = $script:wersja,
+	$uzytkownik = $env:USERNAME
 )
     New-Object PSObject -Property @{
         Wersja = $wersja
-        User = $env:USERNAME
+        User = $Uzytkownik
         Data = Get-Date -Format g
     } | Foreach-Object {
         $_.PSTypeNames.Insert(0,'MojModul.Test')
